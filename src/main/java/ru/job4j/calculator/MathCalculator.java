@@ -1,6 +1,5 @@
 package ru.job4j.calculator;
 
-import ru.job4j.math.MathFunction;
 
 import static ru.job4j.math.MathFunction.*;
 
@@ -10,11 +9,11 @@ public class MathCalculator {
     }
 
     public static double minAndDivSum(double first, double second) {
-        return minus(first, second) + new MathFunction().divide(first, second);
+        return minus(first, second) + divide(first, second);
     }
 
     public static double allSum(double first, double second) {
-        return sum(first, second) + minus(first, second) + new MathFunction().divide(first, second) + multiply(first, second);
+        return sum(first, second) + minus(first, second) + divide(first, second) + multiply(first, second);
     }
 
     public static void main(String[] args) {
