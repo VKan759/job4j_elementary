@@ -59,22 +59,4 @@ class ConverterTest {
         float value = 0.0001f;
         assertThat(output).isEqualTo(expected, withPrecision(value));
     }
-
-    @Test
-    void whenConvertMinusRblThenErrorEuro() {
-        float input = -3;
-        float expected = -1;
-        float output = Converter.rubleToEuro(input);
-        float value = 0.0001f;
-        assertThat(output).isEqualTo(expected, withPrecision(value));
-    }
-
-    @Test
-    void whenConvertMinusRblThenErrorDollar() {
-        float input = -3;
-        float expected = -1;
-        float output = Converter.rubleToDollar(input);
-        float value = 0.0001f;
-        assertThat(output).isEqualTo(expected, withPrecision(value));
-    }
 }

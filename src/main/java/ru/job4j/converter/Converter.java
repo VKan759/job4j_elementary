@@ -3,18 +3,10 @@ package ru.job4j.converter;
 public class Converter {
 
     public static float rubleToEuro(float value) {
-        if (value < 0) {
-            System.out.println("Значение не может быть отрицательным");
-            return -1;
-        }
         return value / 70;
     }
 
     public static float rubleToDollar(float value) {
-        if (value < 0) {
-            System.out.println("Значение не может быть отрицательным");
-            return -1;
-        }
         return value / 60;
     }
 
