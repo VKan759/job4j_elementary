@@ -23,4 +23,22 @@ class CounterTest {
         int output = Counter.sum(start, finish);
         assertThat(output).isEqualTo(expected);
     }
+
+    @Test
+    void sumByEvenWhen0And9Then20() {
+    int start = 0;
+    int finish = 9;
+    int output = Counter.sumByEven(start, finish);
+    int expected = 20;
+    assertThat(output).isEqualTo(expected);
+    }
+
+    @Test
+    void sumByEvenWhenMinus3And5Then4() {
+        int start = -3;
+        int finish = 5;
+        int output = Counter.sumByEven(start, finish);
+        int expected = 4;
+        assertThat(output).isEqualTo(expected);
+    }
 }
