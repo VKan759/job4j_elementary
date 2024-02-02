@@ -7,6 +7,14 @@ import static org.assertj.core.api.Assertions.*;
 class SquareTest {
 
     @Test
+    void whenBound3Then014() {
+        int bound = 3;
+        int[] result = Square.calculate(bound);
+        int[] expected = new int[]{0, 1, 4};
+        assertThat(result).containsExactly(expected);
+    }
+
+    @Test
     void when5Then014916() {
         int bound = 5;
         int[] output = Square.calculate(bound);
