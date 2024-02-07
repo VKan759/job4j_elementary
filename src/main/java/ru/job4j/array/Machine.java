@@ -16,7 +16,7 @@ public class Machine {
             size++;
             result[size - 1] = coins[moneyIndex];
             if (change < coins[moneyIndex]) {
-            moneyIndex++;
+                moneyIndex++;
             }
         }
         return Arrays.copyOf(result, size);
