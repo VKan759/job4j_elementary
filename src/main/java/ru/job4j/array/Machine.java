@@ -8,14 +8,15 @@ public class Machine {
         int[] coins = {10, 5, 2, 1};
         int[] result = new int[100];
         int size = 0;
-
-        int change = money - price;
+        money = money - price;
         int moneyIndex = 0;
-        while (change > 0) {
-            change = change - coins[moneyIndex];
-            size++;
-            result[size - 1] = coins[moneyIndex];
-            if (change < coins[moneyIndex]) {
+
+        while (money > 0) {
+            if (money >= coins[moneyIndex]) {
+                money = money - coins[moneyIndex];
+                size++;
+                result[size - 1] = coins[moneyIndex];
+            } else {
                 moneyIndex++;
             }
         }
