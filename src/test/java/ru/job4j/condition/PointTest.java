@@ -43,11 +43,29 @@ class PointTest {
     }
 
     @Test
-    void when7Minus8toMinus6And9Then21Dot40() {
-        double expected = 21.40;
-        Point a = new Point(7, -8);
-        Point b = new Point(-6, 9);
-        double output = a.distance(b);
+    void when7Minus8And9toMinus6And9And4Then21Dot98() {
+        double expected = 21.98;
+        Point a = new Point(7, -8, 9);
+        Point b = new Point(-6, 9, 4);
+        double output = a.distance3d(b);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    }
+
+    @Test
+    void whenMinus2And2And7To3And0And5Then5Dot74() {
+        double expected = 5.74;
+        Point a = new Point(-2, 2, 7);
+        Point b = new Point(3, 0, 5);
+        double output = a.distance3d(b);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    }
+
+    @Test
+    void when338to088Then6Dot56() {
+        double expected = 6.56;
+        Point a = new Point(3, 3, 5);
+        Point b = new Point(0, 8, 8);
+        double output = a.distance3d(b);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 }
